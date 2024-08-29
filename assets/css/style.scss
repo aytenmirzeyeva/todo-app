@@ -1,0 +1,131 @@
+:root {
+  --light-orange: #ff5845;
+  --darker-orange: #e04a39;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: linear-gradient(135deg, #032062 0%, #4a085f 100%);
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.todo-container {
+  width: 100%;
+  min-height: 200px;
+  max-width: 700px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 5% auto;
+  padding: 40px;
+  .todo-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    h1 {
+      font-size: 50px;
+      .custom-color {
+        color: var(--light-orange);
+      }
+    }
+    .note-svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .input-group {
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+    #todo-input {
+      background-color: #edeef0;
+      font-size: 20px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 18px 22px;
+      border: none;
+      border-radius: 40px;
+      outline: none;
+      &:focus {
+        outline: 1px solid #d0d0d1;
+      }
+    }
+    #add-button {
+      background-color: var(--light-orange);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 500;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 25%;
+      padding: 18px;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      &:hover {
+        background-color: var(--darker-orange);
+      }
+    }
+  }
+  #todo-list {
+    font-size: 20px;
+    list-style-type: none;
+    margin-top: 140px;
+    margin-bottom: 40px;
+    list-style-position: inside;
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  }
+}
+.circle {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #d0d0d1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.circle i {
+  color: #fff;
+}
+.selected {
+  background-color: var(--light-orange);
+  border: none;
+  transition: all 0.3s ease;
+}
+.done {
+  text-decoration: line-through;
+  color: #d0d0d1;
+}
+.delete-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.delete-button i {
+  color: #c5c5c5;
+  cursor: pointer;
+  font-size: 25px;
+}
+#delete-button:hover {
+  color: #b9b9b9;
+}
+.todo-item-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
