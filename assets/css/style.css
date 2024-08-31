@@ -131,7 +131,7 @@ body {
   font-size: 25px;
 }
 
-#delete-button:hover {
+.delete-button:hover i {
   color: #b9b9b9;
 }
 
